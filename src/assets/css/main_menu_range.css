@@ -1,0 +1,591 @@
+.WebrenderPictureElement .PictureElement__imgDefault {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%
+}
+
+.WebrenderPictureElement.is-full-width .PictureElement__imgDefault {
+    width: 100%
+}
+
+.WebrenderPictureElement.is-ratio-forced {
+    padding-top: calc(var(--ratio-webrender-height, 2)/var(--ratio-webrender-width, 3)*100%);
+    height: 0;
+    position: relative;
+    width: 100%
+}
+
+.WebrenderPictureElement.is-ratio-forced .PictureElement__imgDefault {
+    height: 100%;
+    left: 0;
+    object-fit: scale-down;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.MainMenuModel {
+    align-items: center;
+    display: flex;
+    position: relative
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuModel {
+        align-items:flex-start;
+        flex-direction: column
+    }
+}
+
+.MainMenuModel__imageWrapper {
+    flex-shrink: 0
+}
+
+@media screen and (min-width: 670px) {
+    .MainMenuModel__imageWrapper {
+        width:220px
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuModel__imageWrapper {
+        width:100%
+    }
+}
+
+.MainMenuModel__name {
+    margin-left: 8px
+}
+
+.MainMenuModel__name:before {
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuModel__name {
+        margin-left:8px
+    }
+}
+
+.MainMenuModel:nth-child(n+15) {
+    display: none
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuModel {
+        padding:0 8px
+    }
+}
+
+@media screen and (max-width: 669px) {
+    .MainMenuModel__imageWrapper {
+        width:120px
+    }
+}
+
+.MainMenuModel__name {
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: 400
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuModel__name {
+        margin-top:4px;
+        padding-left: 12px
+    }
+}
+
+.ButtonMore {
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background-color: #ffce33;
+    transform: translate3d(0,-50%,0) rotate(135deg);
+    padding: 0
+}
+
+@media screen and (min-width: 670px) {
+    .ButtonMore {
+        transition:all .5s .5s
+    }
+
+    .ButtonMore:focus,.ButtonMore:hover {
+        transform: translateY(-50%) rotate(0deg);
+        transition: all .5s
+    }
+
+    .ButtonMore:focus .ButtonMore__label,.ButtonMore:hover .ButtonMore__label {
+        max-width: 100vw;
+        transition: all 2s .5s
+    }
+
+    .ButtonMore:focus .ButtonMore__picto:after,.ButtonMore:focus .ButtonMore__picto:before,.ButtonMore:hover .ButtonMore__picto:after,.ButtonMore:hover .ButtonMore__picto:before {
+        transform: translate(-50%,-50%) rotate(90deg);
+        transition: all .5s
+    }
+}
+
+.ButtonMore__picto {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ffce33
+}
+
+.ButtonMore__picto:after,.ButtonMore__picto:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: "";
+    display: inline-block;
+    background-color: #1f2532;
+    transform: translate3d(-50%,-50%,0) rotate(-45deg)
+}
+
+@media screen and (min-width: 670px) {
+    .ButtonMore__picto:after,.ButtonMore__picto:before {
+        transition:transform .5s .5s
+    }
+}
+
+.ButtonMore__picto:before {
+    width: 12px;
+    height: 2px
+}
+
+.ButtonMore__picto:after {
+    width: 2px;
+    height: 12px
+}
+
+.ButtonMore__label {
+    display: none
+}
+
+@media screen and (min-width: 670px) {
+    .ButtonMore__label {
+        position:absolute;
+        display: flex;
+        flex-direction: column;
+        flex-basis: auto;
+        align-items: flex-end;
+        justify-content: center;
+        height: 32px;
+        margin: 0;
+        white-space: nowrap;
+        background-color: #ffce33;
+        z-index: -1;
+        transition: all .5s;
+        max-width: 0;
+        overflow: hidden;
+        top: 0
+    }
+}
+
+.ButtonMore__labelWording {
+    padding: 0 16px 0 32px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1f2532
+}
+
+.ButtonMore.ButtonMore_large {
+    width: 48px;
+    height: 48px
+}
+
+.ButtonMore.ButtonMore_large .ButtonMore__picto:before {
+    width: 16px
+}
+
+.ButtonMore.ButtonMore_large .ButtonMore__picto:after {
+    height: 16px
+}
+
+.ButtonMore.ButtonMore_large .ButtonMore__label {
+    height: 48px
+}
+
+.ButtonMore.ButtonMore_large .ButtonMore__labelWording {
+    padding: 0 16px 0 48px;
+    font-size: 1.4rem
+}
+
+.MainMenuRangeModels {
+    display: grid;
+    grid-template-columns: 1fr
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangeModels {
+        border-left:1px solid #e6e6ec;
+        gap: 16px;
+        padding-left: 32px
+    }
+}
+
+.MainMenuRangeModels__element {
+    display: flex
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangeModels__element {
+        justify-content:center
+    }
+}
+
+.MainMenuRangeModels__element:hover .MainMenuRangeModels__linkLabel {
+    color: #000
+}
+
+.MainMenuRangeModels__elementLinkInner {
+    align-items: center;
+    display: inline-flex;
+    padding-left: 32px
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangeModels__elementLinkInner {
+        flex-direction:column;
+        justify-content: center
+    }
+}
+
+.MainMenuRangeModels__linkLabel {
+    color: #777;
+    font-size: 1.3rem;
+    transition: color .5s;
+    margin-top: -32px;
+    padding-left: 16px
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangeModels__linkLabel {
+        margin-top:0;
+        padding-left: 0
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangeModels {
+        grid-template-columns:repeat(5,1fr)
+    }
+}
+
+.MainMenuRangeModels__element {
+    min-height: 80px
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .3
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.MainMenuRangePicker {
+    display: flex;
+    flex-wrap: wrap
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangePicker {
+        justify-content:center;
+        border: 0;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: "tab content" "tab content" "tab content" "tab content" "tab content" "tab content" "tab content" "tab content" "tab content" "tab content" "tab content" "tab content" "tab content" "tab content"
+    }
+
+    .MainMenuRangePicker .MainMenuRangePicker__tab {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 16px 0 0
+    }
+
+    .MainMenuRangePicker .MainMenuRangePicker__tab.is-lastActive:before {
+        width: 3px
+    }
+
+    .MainMenuRangePicker .MainMenuRangePicker__tab:focus:before,.MainMenuRangePicker .MainMenuRangePicker__tab:hover:before {
+        width: 3px
+    }
+
+    .MainMenuRangePicker .MainMenuRangePicker__content {
+        grid-area: content;
+        background-color: transparent
+    }
+
+    .MainMenuRangePicker .MainMenuRangePicker__tabTitle {
+        text-transform: none;
+        white-space: normal
+    }
+}
+
+.MainMenuRangePicker__links {
+    border-top: 1px solid #e6e6ec;
+    padding: 16px 0;
+    width: 100%;
+    grid-row-end: content
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangePicker__links {
+        border:0
+    }
+}
+
+.MainMenuRangePicker__tab {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1.4rem;
+    position: relative;
+    text-align: left
+}
+
+.MainMenuRangePicker__tab:after,.MainMenuRangePicker__tab:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 2px;
+    transition: transform .5s;
+    will-change: transform
+}
+
+.MainMenuRangePicker__tab:before {
+    right: 22px;
+    transform: translateY(-50%) rotate(45deg)
+}
+
+.MainMenuRangePicker__tab:after {
+    right: 16px;
+    transform: translateY(-50%) rotate(-45deg)
+}
+
+.MainMenuRangePicker__tab.is-active:before {
+    transform: translateY(-50%) rotate(-45deg)
+}
+
+.MainMenuRangePicker__tab.is-active:after {
+    transform: translateY(-50%) rotate(45deg)
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangePicker__tab {
+        flex-direction:column;
+        justify-content: flex-end;
+        flex-grow: 0;
+        order: 1;
+        position: relative;
+        width: auto
+    }
+
+    .MainMenuRangePicker__tab:after,.MainMenuRangePicker__tab:before {
+        content: none
+    }
+
+    .MainMenuRangePicker__tab.is-active:before,.MainMenuRangePicker__tab.is-lastActive:before {
+        transform: none
+    }
+
+    .MainMenuRangePicker__tab.is-active .MainMenuRangePicker__tabTitle {
+        font-weight: 400
+    }
+
+    .MainMenuRangePicker__tab.is-lastActive .MainMenuRangePicker__tabTitle {
+        font-weight: 700
+    }
+}
+
+.MainMenuRangePicker__tabTitle {
+    font-family: "readBeta2 sans-serif";
+    font-size: 1.4rem;
+    font-weight: 700
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangePicker__tabTitle {
+        white-space:nowrap;
+        font-weight: 400
+    }
+}
+
+.MainMenuRangePicker__content {
+    width: 100%;
+    font-size: 2.2rem;
+    max-height: 0;
+    padding: 0 8px;
+    transition: max-height .5s ease;
+    will-change: max-height;
+    overflow: hidden
+}
+
+.MainMenuRangePicker__content.is-active {
+    max-height: 10000px;
+    padding: 0
+}
+
+.MainMenuRangePicker__content:before {
+    border-top: 2px solid #ffce33
+}
+
+.MainMenuRangePicker__content:after {
+    border-bottom: 2px solid #ffce33
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangePicker__content {
+        order:6;
+        transition: none;
+        max-height: 10000px;
+        display: none;
+        padding: 0
+    }
+
+    .MainMenuRangePicker__content.is-lastActive {
+        display: block;
+        border-bottom: none
+    }
+}
+
+.MainMenuRangePicker__listElement {
+    font-size: 1.4rem
+}
+
+.MainMenuRangePicker__listElement:not(:last-child) {
+    margin-bottom: 16px
+}
+
+.MainMenuRangePicker__ctaLink {
+    font-weight: 700
+}
+
+.MainMenuRangePicker {
+    border-color: #e6e6ec
+}
+
+.MainMenuRangePicker__tab {
+    color: #1f2532
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangePicker__tab {
+        border-right:solid #ccc;
+        border-width: 0;
+        color: #777;
+        font-weight: 400;
+        text-align: center;
+        transition: none
+    }
+
+    .MainMenuRangePicker__tab.is-lastActive {
+        color: #1f2532
+    }
+}
+
+.MainMenuRangePicker__tabTitle {
+    font-size: 1.6rem;
+    font-weight: 400
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangePicker__tabTitle {
+        font-size:1.4rem;
+        text-transform: uppercase
+    }
+}
+
+.MainMenuRangePicker_vertical .MainMenuRangePicker__tab:after,.MainMenuRangePicker_vertical .MainMenuRangePicker__tab:before {
+    background-color: #000
+}
+
+.MainMenuRangePicker_vertical .MainMenuRangePicker__tab.is-active:after,.MainMenuRangePicker_vertical .MainMenuRangePicker__tab.is-active:before {
+    background-color: #000
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangePicker_vertical .MainMenuRangePicker__tab.is-active:after,.MainMenuRangePicker_vertical .MainMenuRangePicker__tab.is-active:before {
+        background-color:#ccc
+    }
+}
+
+.MainMenuRangePicker_vertical .MainMenuRangePicker__tab.is-active .MainMenuRangePicker__tabTitle {
+    color: #777
+}
+
+.MainMenuRangePicker_vertical .MainMenuRangePicker__tab.is-active .MainMenuRangePicker__tabTitle:hover {
+    color: #000
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangePicker_vertical .MainMenuRangePicker__tab.is-lastActive:before {
+        background-color:#000
+    }
+}
+
+.MainMenuRangePicker_vertical .MainMenuRangePicker__tab.is-lastActive .MainMenuRangePicker__tabTitle {
+    color: #000
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuRangePicker_vertical .MainMenuRangePicker__tab:before {
+        background-color:#ccc
+    }
+
+    .MainMenuRangePicker_vertical .MainMenuRangePicker__tab:focus:before,.MainMenuRangePicker_vertical .MainMenuRangePicker__tab:hover:before {
+        background-color: #000
+    }
+}
+
+.MainMenuRangePicker_vertical .MainMenuRangePicker__tabTitle {
+    color: #777
+}
+
+.MainMenuRangePicker_vertical .MainMenuRangePicker__tabTitle:hover {
+    color: #000
+}
+
+.MainMenuRangePicker__link {
+    color: #333
+}
+
+.MainMenuRangePicker__link:hover {
+    color: #1f2532
+}
+
+.MainMenuRangePicker__ctaLink {
+    color: #777f91
+}
+
+.MainMenuRangePicker__svgArrowRight {
+    position: relative;
+    margin-right: 8px;
+    width: 10px
+}
+
+.MainMenuRangePicker__svgArrowRight path {
+    fill: #777f91
+}

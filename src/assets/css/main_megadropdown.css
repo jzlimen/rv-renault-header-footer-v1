@@ -1,0 +1,257 @@
+.LinksColumn__toggle {
+    position: relative;
+    padding-right: 32px;
+    margin-bottom: 16px
+}
+
+.LinksColumn__toggle.is-expanded .LinksColumn__svgArrowRight {
+    transform: rotate(90deg) translateX(-50%)
+}
+
+.LinksColumn__svgArrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0
+}
+
+@media screen and (min-width: 1024px) {
+    .LinksColumn__svgArrowRight {
+        display:none
+    }
+}
+
+.LinksColumn__title {
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    margin-bottom: 32px
+}
+
+@media screen and (min-width: 1024px) {
+    .LinksColumn__title {
+        margin:0
+    }
+}
+
+.LinksColumn__list {
+    display: none;
+    margin-bottom: 32px
+}
+
+.LinksColumn__list.is-visible {
+    display: block
+}
+
+.LinksColumn__list:not(:first-child) {
+    margin-bottom: 32px
+}
+
+.LinksColumn__list:last-child {
+    margin-top: auto
+}
+
+@media screen and (min-width: 1024px) {
+    .LinksColumn__list {
+        display:block;
+        margin: 0
+    }
+}
+
+.LinksColumn__listElement {
+    font-size: 1.4rem
+}
+
+.LinksColumn__listElement:not(:last-child) {
+    margin-bottom: 16px
+}
+
+@media screen and (min-width: 1024px) {
+    .LinksColumn__listElement:not(:last-child) {
+        margin-bottom:8px
+    }
+}
+
+.LinksColumn__link {
+    color: #333
+}
+
+.LinksColumn__ctaLink {
+    font-weight: 700
+}
+
+.LinksColumn__link:hover {
+    font-weight: 700
+}
+
+.LinksColumn__ctaLink {
+    color: #777f91
+}
+
+.LinksColumn__svgArrowRight {
+    width: 13px
+}
+
+.LinksColumn__svgArrowRight path {
+    fill: #000
+}
+
+.LinksColumn__linkSvgArrowRight {
+    position: relative;
+    margin-right: 8px;
+    width: 10px
+}
+
+.LinksColumn__linkSvgArrowRight path {
+    fill: #777f91
+}
+
+.LinksColumn__list:last-child {
+    padding-bottom: 16px;
+    margin-bottom: 16px
+}
+
+@media screen and (min-width: 1024px) {
+    .LinksColumn__list:last-child {
+        padding-bottom:0;
+        margin-bottom: 0
+    }
+}
+
+.ImageColumn__title {
+    color: #000;
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+    font-weight: 700
+}
+
+@media screen and (min-width: 1024px) {
+    .ImageColumn__title {
+        margin-top:32px
+    }
+}
+
+.ImageColumn__image {
+    display: inline-block;
+    overflow: hidden;
+    width: 132px;
+    height: 74px;
+    margin-bottom: 32px
+}
+
+@media screen and (min-width: 670px) {
+    .ImageColumn__image {
+        width:248px;
+        height: 139px
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .ImageColumn__image {
+        width:296px;
+        height: 166px;
+        margin: 0
+    }
+}
+
+.ImageColumn__image .PictureElement__imgDefault {
+    max-height: 166px;
+    transition: transform .35s ease-in-out
+}
+
+.ImageColumn__image .PictureElement__imgDefault:hover {
+    transform: scale(1.07)
+}
+
+@media screen and (min-width: 1024px) {
+    .ImageColumn__image {
+        width:280px;
+        height: 157.5px;
+        margin: 0
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .3
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.MainMenuMegaDropDownContent {
+    color: #000
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuMegaDropDownContent {
+        display:flex;
+        flex-wrap: wrap
+    }
+
+    .MainMenuMegaDropDownContent:first-child {
+        margin-bottom: 32px
+    }
+}
+
+.MainMenuMegaDropDownContent__element {
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    position: relative
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuMegaDropDownContent__element {
+        width:296px;
+        padding: 0;
+        flex-basis: calc((100% - 96px)/4);
+        margin-right: 32px
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .MainMenuMegaDropDownContent__element:nth-child(4n+0) {
+        margin-right:0
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuMegaDropDownContent__linkColumn {
+        height:179.2px;
+        margin: 40px 0
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuMegaDropDownContent__imageColumn {
+        margin-top:32px
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuMegaDropDownContent__rangesPicker {
+        flex-basis:auto
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .MainMenuMegaDropDownContent:first-child .MainMenuMegaDropDownContent__element:not(:last-child):after {
+        width:1px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: -16px;
+        content: "";
+        background-color: #f3f5f6
+    }
+}
